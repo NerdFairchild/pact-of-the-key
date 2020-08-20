@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+  <info>
+    <name>Pact of the Key</name>
+    <description>The Pact of the Key from FrostBladestorm</description>
+    <author url="https://www.gmbinder.com/share/-MCbRVu3clbGiaF76pfl">FrostBladestorm</author>
+    <update version="0.0.1">
+      <file name="warlock-key-pact.xml" url="" />
+    </update>
+  </info>
+
+
+  <!-- Pact of the Key -->
+  <element name="Pact of the Key" type="Class Feature" source="FrostBladestorm" id="ID_WARLOCK_PACT_OF_THE_KEY">
+    <supports>Pact Boon</supports>
+    <description>
+	    <p>Your patron has granted you access to a pocket realm they created. You gain a key of a design resembling that of your patron. You can use this key as a spellcasting focus for your warlock spells. While you are holding your key, you can spend 1 minute channeling energy into the key to construct a 10 foot tall and 5 foot wide doorway in an unoccupied space adjacent to you. You must have a free hand to construct this doorway, and if you are interrupted you must start the construction again. Once the doorway opens, it remains open until all creatures have exited the realm. A creature can attempt to enter the realm by succeeding a Charisma saving throw with a DC equal to your spell save DC. Creatures you designate automatically succeed on this saving throw. A creature can see clearly for 15 feet through the other side of the doorway before it fades into a blur.</p>
+      <p class="indent">The environment inside this pocket realm is no larger than a 100-foot cube. The atmosphere is clean, fresh, and warm. The first time you create this pocket realm it is outfitted with a bed, a couch, a dresser, a mirror, a light source, a water source, and an icon of your patron. The doorway location on the other side of the realm is selected when you create the doorway.</p>
+      <p class="indent">If you lose your key, you can perform a 1-hour ceremony to receive a replacement from your patron. This can be performed during a short or long rest, and it destroys the previous key. The key fades when you die.</p>
+      <p class="indent">Once you successfully summon the doorway, you cannot do so again until the doorway closes.</p>
+    </description>
+    <sheet display="true">
+      <description>
+      <p>Your patron has granted you access to a pocket realm they created. You gain a key of a design resembling that of your patron. You can use this key as a spellcasting focus for your warlock spells. While you are holding your key, you can spend 1 minute channeling energy into the key to construct a 10 foot tall and 5 foot wide doorway in an unoccupied space adjacent to you. You must have a free hand to construct this doorway, and if you are interrupted you must start the construction again. Once the doorway opens, it remains open until all creatures have exited the realm. A creature can attempt to enter the realm by succeeding a Charisma saving throw with a DC equal to your spell save DC. Creatures you designate automatically succeed on this saving throw. A creature can see clearly for 15 feet through the other side of the doorway before it fades into a blur.</p>
+      <p class="indent">The environment inside this pocket realm is no larger than a 100-foot cube. The atmosphere is clean, fresh, and warm. The first time you create this pocket realm it is outfitted with a bed, a couch, a dresser, a mirror, a light source, a water source, and an icon of your patron. The doorway location on the other side of the realm is selected when you create the doorway.</p>
+      <p class="indent">If you lose your key, you can perform a 1-hour ceremony to receive a replacement from your patron. This can be performed during a short or long rest, and it destroys the previous key. The key fades when you die.</p>
+      <p class="indent">Once you successfully summon the doorway, you cannot do so again until the doorway closes.</p>
+      </description>
+    </sheet>
+  </element>
+   
+  <!-- Eldritch Invocations -->
+
+  <element name="Vault of Secrets" type="Class Feature" source="FrostBladestorm" id="ID_CLASS_FEATURE_ELDRITCH_INVOCATION_VAULT_OF_SECRETS">
+    <supports>Eldritch Invocation</supports>
+    <prerequisite>Pact of the Key feature</prerequisite>
+    <requirements>ID_WARLOCK_PACT_OF_THE_KEY</requirements>
+    <description>
+      <p class="flavor">Prerequisite: Pact of the Key feature</p>
+      <p>As an action you can create a minor gateway with the key and reach inside it, retrieving a single item no bigger than a 5-foot cube.</p>
+      <p>You can use this action a number of times equal to your Charisma modifier. You regain all expended uses when you finish a short rest.</p>
+    </description>
+    <sheet>
+      <description>
+      <p>As an action you can create a minor gateway with the key and reach inside it, retrieving a single item no bigger than a 5-foot cube.</p> 
+      <p>You can use this action a number of times equal to your Charisma modifier. You regain all expended uses when you finish a short rest.</p>
+      </description>
+    </sheet>
+  </element>
+
+  <element name="Lockdown" type="Class Feature" source="FrostBladestorm" id="ID_CLASS_FEATURE_ELDRITCH_INVOCATION_LOCKDOWN">
+    <supports>Eldritch Invocation</supports>
+    <prerequisite>5th level, Pact of the Key feature</prerequisite>
+    <requirements>[level:5],ID_WARLOCK_PACT_OF_THE_KEY</requirements>
+    <description>
+      <p class="flavor">Prerequisite: 5th level, Pact of the Key feature</p>
+      <p>You can cast arcane lock at will, without expending a spell slot. When arcane lock is cast this way, you must be holding your key and the spell has a range of touch.</p>
+    </description>
+    <sheet>
+      <description>You can cast arcane lock at will, without expending a spell slot. When arcane lock is cast this way, you must be holding your key and the spell has a range of touch.</description>
+    </sheet>
+    <rules>
+    <grant type="Spell" id="ID_PHB_SPELL_ARCANE_LOCK" />
+    </rules>
+  </element>
+
+  <element name="Planeswalker" type="Class Feature" source="FrostBladestorm" id="ID_CLASS_FEATURE_ELDRITCH_INVOCATION_PLANESWALKER">
+    <supports>Eldritch Invocation</supports>
+    <prerequisite>15th level, Pact of the Key feature</prerequisite>
+    <requirements>[level:15],ID_WARLOCK_PACT_OF_THE_KEY</requirements>
+    <description>
+      <p class="flavor">Prerequisite: 15th level, Pact of the Key feature</p>
+      <p>You can cast plane shift once without expending a spell slot. You cannot do so again until you finish a long rest.</p>
+    </description>
+    <sheet>
+      <description>You can cast plane shift once without expending a spell slot. You cannot do so again until you finish a long rest.</description>
+    </sheet>
+    <rules>
+    <grant type="Spell" id="ID_PHB_SPELL_PLANE_SHIFT" />
+    </rules>
+  </element>
+
+  <element name="Improved Realm" type="Class Feature" source="FrostBladestorm" id="ID_CLASS_FEATURE_ELDRITCH_INVOCATION_IMPROVED_REALM">
+    <supports>Eldritch Invocation</supports>
+    <prerequisite>9th level, Pact of the Key feature</prerequisite>
+    <requirements>[level:9],ID_WARLOCK_PACT_OF_THE_KEY</requirements>
+    <description>
+      <p class="flavor">Prerequisite: 9th level, Pact of the Key feature</p>
+      <p>The size of your pocket realm is now a maximum of a 300-foot cube. In addition, a creature that attempts to enter your realm makes their saving throw with disadvantage.</p>
+    </description>
+    <sheet>
+      <description>The size of your pocket realm is now a maximum of a 300-foot cube. In addition, a creature that attempts to enter your realm makes their saving throw with disadvantage.</description>
+    </sheet>
+  </element>
+
+  <element name="Open Sesame" type="Class Feature" source="FrostBladestorm" id="ID_CLASS_FEATURE_ELDRITCH_INVOCATION_OPEN_SESAME">
+    <supports>Eldritch Invocation</supports>
+    <prerequisite>Pact of the Key feature</prerequisite>
+    <requirements>ID_WARLOCK_PACT_OF_THE_KEY</requirements>
+    <description>
+      <p class="flavor">Prerequisite: Pact of the Key feature</p>
+      <p>As an action, you can use your pact key to open an object such as a door, box, chest, set of manacles, padlock, or another mundane object that is locked. If the object has multiple locks, only one of them is unlocked.</p>
+      <p>You can use this invocation a number of times equal to your Charisma modifier. You regain all expended uses when you finish a short rest.</p>
+    </description>
+    <sheet>
+      <description>
+      <p>As an action, you can use your pact key to open an object such as a door, box, chest, set of manacles, padlock, or another mundane object that is locked. If the object has multiple locks, only one of them is unlocked.</p>
+      <p>You can use this invocation a number of times equal to your Charisma modifier. You regain all expended uses when you finish a short rest.</p>
+      </description>
+    </sheet>
+  </element>
+</elements>
